@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
@@ -14,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 import dam.gtidic.examenfinal2122.R;
 import dam.gtidic.examenfinal2122.databinding.ActivityAdventureBinding;
 import dam.gtidic.examenfinal2122.usecases.game.math.GameActivityMath;
+import dam.gtidic.examenfinal2122.utils.PreferencesProvider;
 
 public class AdventureActivity extends AppCompatActivity {
 
@@ -43,7 +45,6 @@ public class AdventureActivity extends AppCompatActivity {
                 showMathAdventure(v);
             }
         });
-
 
         this.getOnBackPressedDispatcher()
                 .addCallback(this, new OnBackPressedCallback(true) {

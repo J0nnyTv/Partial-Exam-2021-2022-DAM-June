@@ -26,6 +26,12 @@ public class LauncherActivity extends AppCompatActivity {
         Log.d(this.getClass().getSimpleName(), " -> setup()");
         Log.d(this.getClass().getSimpleName(), " ... init Shared Preferences()");
         PreferencesProvider.init(this);
+
+        //Lives comienza a 0 al pasar por esta activity solo si no hay nada guardado en lives
+        int lives = PreferencesProvider.providePreferences().getInt("lives", 0);
+        if (lives == 0){
+            PreferencesProvider.providePreferences().edit().putInt("lives", 0).commit();
+        }
     }
 
     private void data(){
