@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +36,14 @@ public class AdventureActivity extends AppCompatActivity {
         binding.setViewModel(viewModel);
         binding.setLifecycleOwner(this);
 
+        //Boton 1 solucionado el error
+        Button mathAdventure = findViewById(R.id.mathAdventureButton);
+        mathAdventure.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                showMathAdventure(v);
+            }
+        });
+
 
         this.getOnBackPressedDispatcher()
                 .addCallback(this, new OnBackPressedCallback(true) {
@@ -48,8 +58,8 @@ public class AdventureActivity extends AppCompatActivity {
         Log.d(this.getClass().getSimpleName(),"...data() ");
     }
 
-    private void showMathAdventure(View view){
-            startActivity( new Intent(this, GameActivityMath.class));
+    public void showMathAdventure(View view){
+        startActivity( new Intent(this, GameActivityMath.class));
     }
 
 

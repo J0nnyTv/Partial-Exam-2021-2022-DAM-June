@@ -10,6 +10,7 @@ import java.util.List;
 
 import dam.gtidic.examenfinal2122.utils.PreferencesProvider;
 
-public class AdventureViewModel  {
+//El primer error viene de no extender la clase a ViewModel
+public class AdventureViewModel extends ViewModel {
 
 }
