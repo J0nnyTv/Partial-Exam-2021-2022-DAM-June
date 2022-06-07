@@ -63,7 +63,6 @@ public class AdventureActivity extends AppCompatActivity {
         startActivity( new Intent(this, GameActivityMath.class));
     }
 
-
     private void close(){
         Log.d(this.getClass().getSimpleName(), "...closing()");
         finishAffinity();

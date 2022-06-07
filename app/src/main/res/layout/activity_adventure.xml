@@ -24,13 +24,14 @@
             android:layout_marginStart="60dp"
             android:layout_marginBottom="32dp"
             android:backgroundTint="#8BC34A"
-            android:onClick="showMathAdventure"
+            android:onClick="@{() -> viewModel.showMathAdventureButton()}"
             android:text="@string/_1"
             android:textColor="#37474F"
             app:cornerRadius="50dp"
             app:layout_constraintBottom_toTopOf="@+id/mathAdventureLogo"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="TextContrastCheck"
+            android:enabled="@{viewModel.adventure_button}"/>
 
         <Button
             android:id="@+id/stringAdventure"
